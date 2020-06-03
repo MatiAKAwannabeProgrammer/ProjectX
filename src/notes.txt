@@ -1,0 +1,31 @@
+Bullet:
+    - I want to shoot every 100ms, in order to do that I need to create the clock and allow
+    the bulletCreate function to be called every 100ms.
+    The bulletClock is already restarting in the playerShooting method.
+    - I need to have the vector and functions in main.cpp, it's easier tto handle the objects 
+    like this.
+
+Enemy:
+    - I need the enemies to spawn very fast
+    - I'd like to create a wave system soo each wave will have an increasingly large amount of 
+    enemies spawning.
+    - Each enemy should have a health pool, regular one should die after 3-4 hits.
+    
+Enemy BOSS:
+    - Works the same way a regular enemy does, however spawns an x amount of times /wave, much
+    less then a mini enemy does and has a much larger health pool.
+    - Bigger and more scary texture.
+
+Pickups:
+    - I'd like to have a health mechanics, random heart appearing in the arena to regenerate health.
+    - random boosts that last few seconds like firing a larger amount of bullet/shot.
+
+Stats:
+    - health stat, just a number, each time the player gets hit he loses a health point.
+    - score, each enemy will add a different amount of points.
+    (Maybe save the scores somewhere into a txt file?)
+
+Mechanics:
+    - I want to add an attack that the enemy would perform when close to a player, 
+    for example if he comes into a certain distance, cast a skill, and if player is then still in
+    range, -1 health

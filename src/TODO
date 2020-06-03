@@ -1,0 +1,10 @@
+[x] Change the player setOrigin function to be in the constructor, I'm pretty sure I do not need to update it in every frame.
+[x] Decrease the enemy movement speed.
+[x] Decrease the enemy spawn frequency.
+[ ] Collision between the enemy and bullet.
+[ ] Clean up the vairables from calculationTwo.
+[ ] Add a texture for the enemies.
+[ ] Create a map texture.
+[ ] Limit the amount of spawned enemies.
+[ ] Determine the amount of enemies based off a wave number.
+[ ] In order to do above, implement wave system.

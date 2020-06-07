@@ -29,3 +29,19 @@ Mechanics:
     - I want to add an attack that the enemy would perform when close to a player, 
     for example if he comes into a certain distance, cast a skill, and if player is then still in
     range, -1 health
+
+-----------------------------------------------------------------------------------------------------
+I need to have a variable - maxEnemies.
+I can add another variable like enemyCount that is initialy equal to zero and every time the
+createEnemy function get called it get bigger.
+Once it's equal to maxEnemies, it shouldn't spawn.
+I can restart the enemy count and increase maxEnemies once the program detecs the enemy vector is
+empty.
+
+if (!roundInProgress)
+    I have to restart the restartClock when the roundInProgress variable swaps to false.
+    then, If I have 5 seconds on the clock
+
+    So the game grashes on the health-- line.
+    I have no idea why, it's just a variable.
+    It doesn't do anything on it's own.

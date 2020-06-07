@@ -1,4 +1,5 @@
 #include "player.hpp"
+
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Window/Keyboard.hpp>
@@ -9,7 +10,7 @@ Player::Player()
     playerTexture.loadFromFile("./content/player.png");
     player.setTexture(playerTexture);
     player.setPosition(sf::Vector2f(800.f, 400.f));
-    speed = 300.f;
+    speed = 200.f;
     player.scale(2.f, 2.f);
     player.setRotation(0);
     player.setOrigin(player.getTexture()->getSize().x/2, player.getTexture()->getSize().y/2);

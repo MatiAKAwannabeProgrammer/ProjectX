@@ -1,10 +1,20 @@
-[x] Change the player setOrigin function to be in the constructor, I'm pretty sure I do not need to update it in every frame.
-[x] Decrease the enemy movement speed.
-[x] Decrease the enemy spawn frequency.
-[ ] Collision between the enemy and bullet.
-[ ] Clean up the vairables from calculationTwo.
+[X] Change the player setOrigin function to be in the constructor, I'm pretty sure I do not need to update it in every frame.
+[X] Decrease the enemy movement speed.
+[X] Decrease the enemy spawn frequency.
+[X] Collision between the enemy and bullet.
+[X] Clean up the vairables from calculationTwo.
 [ ] Add a texture for the enemies.
 [ ] Create a map texture.
-[ ] Limit the amount of spawned enemies.
-[ ] Determine the amount of enemies based off a wave number.
-[ ] In order to do above, implement wave system.
+[X] Limit the amount of spawned enemies.
+[X] Create a delay between the rounds.
+[X] Add a health pool to the enemies.
+#--------------------------------------------------------------------
+#Because I have a enemyCount += 7, I don't really need a wave system. 
+#My current version with the delay works pretty much the same way.
+[C] Determine the amount of enemies based off a wave number.
+[C] In order to do above, implement wave system.
+#---------------------------------------------------------------------
+[X] Add a boss.
+[X] Add a score and health mechanic and display the two at the top of the screen.
+[X] Add a pause menu. 
+[ ] Make the enemy hit the player.

@@ -8,6 +8,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Clock.hpp>
 #include <SFML/System/Vector2.hpp>
+#include <iostream>
 #include <cmath>
 #include <vector>
 #include "bullet.hpp"
@@ -19,6 +20,7 @@ private:
     sf::Texture enemyTexture;
     sf::Vector2f moveDir, moveDirNorm, velocity;
     sf::FloatRect enemyBounds;
+    int health;
 
     int randX, randY;
 
@@ -28,7 +30,7 @@ public:
     void drawEnemy(sf::RenderWindow& window);
     void getEnemyPos();
     void calculations(sf::Vector2f& playerPos);
-    void collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletVec);
+    void collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletVec, int& score);
     sf::Vector2f enemyPos;
     
 };

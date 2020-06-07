@@ -1,0 +1,60 @@
+syntax on
+set number
+set relativenumber
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set cursorline
+set t_md=
+
+set t_Co=256
+
+" Airline settings
+let g:airline_theme='lucius'
+let g:airline_powerline_fonts = 1
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'gruvbox-community/gruvbox'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
+Plug 'yggdroot/indentline'
+
+call plug#end()
+
+" Gruvbox settings
+let g:gruvbox_contrast_dark = 'hard'
+set background=dark
+let g:gruvbox_italic = 0
+let g:gruvbox_termcolors=256
+
+" Theme
+colorscheme gruvbox
+highlight Normal ctermfg=59
+
+" Disable the top screen preview from YCM
+set completeopt-=preview
+
+" NerdCommenter settings
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+
+"transparent background
+"hi Normal guibg=NONE ctermbg=NONE
+
+" Indent lines.
+let g:indentLine_char_list = ['|', '|', '|', '|']
+let g:indentLine_color_term = 8

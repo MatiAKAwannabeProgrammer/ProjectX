@@ -52,3 +52,13 @@ void Enemy::collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletV
         }
     }
 }
+
+void Enemy::enemyAttack(std::vector<Enemy>& enemyVec, sf::Vector2f& playerPos, int& healthInt)
+{
+    for (int i = 0; i < enemyVec.size(); i++){
+        if (enemyVec[i].enemyBounds.contains(playerPos)){
+            healthInt--;
+            enemyVec.erase(enemyVec.begin() + i); 
+        }
+    }
+}

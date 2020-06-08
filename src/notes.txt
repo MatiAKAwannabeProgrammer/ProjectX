@@ -51,5 +51,10 @@ if (!roundInProgress)
 Attacking the enemy:
 void enemyAttack
 if (enemyVec[i].attackBounds.constains(playerPos)){
-    attack
+    attack();
+}
+
+void attack()
+{
+    playerHealth--;
 }

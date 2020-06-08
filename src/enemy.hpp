@@ -31,6 +31,7 @@ public:
     void getEnemyPos();
     void calculations(sf::Vector2f& playerPos);
     void collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletVec, int& score);
+    void enemyAttack(std::vector<Enemy>& enemyVec, sf::Vector2f& playerPos, int& healthInt);
     sf::Vector2f enemyPos;
     
 };

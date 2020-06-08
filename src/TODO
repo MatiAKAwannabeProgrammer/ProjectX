@@ -15,4 +15,8 @@
 [X] Add a boss.
 [X] Add a score and health mechanic and display the two at the top of the screen.
 [X] Add a pause menu. 
-[ ] Make the enemy hit the player.
+[X] Make the enemy hit the player.
+[X] Clear the enemies from the screen once the player is killed.
+[X] Restart the health and score for new game.
+[ ] Remove the boss class, it's pretty much identical and causes too much trouble.
+[ ] Make the enemy class handle all enemy types.

@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Clock.hpp>
 #include <SFML/System/Err.hpp>
@@ -29,6 +30,7 @@ void drawEnemy(std::vector<Enemy>&, sf::RenderWindow&);
 void createBoss(std::vector<Boss>&, int&, bool&);
 void updateBoss(std::vector<Boss>&, float&, sf::Vector2f&);
 void drawBoss(std::vector<Boss>&, sf::RenderWindow&);
+void resetMatch(std::vector<Enemy>&, std::vector<Boss>&, int&, int&);
 
 
 int main()
@@ -49,6 +51,7 @@ int main()
     bool isFired = false;
 
     TextClass score;
+    TextClass health;
     TextClass menu;
 
     Map map;
@@ -95,14 +98,18 @@ int main()
             if (gameIsPaused && sf::Keyboard::isKeyPressed(sf::Keyboard::Q)){
                 window.close();
             }
-            if (gameIsPaused && sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
+            if (gameIsPaused && sf::Keyboard::isKeyPressed(sf::Keyboard::P)){
                 gameIsPaused = false;
+                resetMatch(enemyVec, bossVec, scoreInt, healthInt);                
             }
             
         }
         window.clear();
         
         calculations(aimDir, aimDirNorm, currentPlayerPos, mousePos);
+        if (healthInt <= 0){
+            gameIsPaused = true;
+        }
         if (gameIsPaused){
             menu.drawMenu(window);
         }
@@ -145,6 +152,7 @@ int main()
 
             updateEnemy(enemyVec, deltaTime, currentPlayerPos);
             drawEnemy(enemyVec, window);
+            enemyPtr->enemyAttack(enemyVec, currentPlayerPos, healthInt);
             enemyPtr->collision(enemyVec, bulletVec, scoreInt);
 
             updateBoss(bossVec, deltaTime, currentPlayerPos);
@@ -152,10 +160,11 @@ int main()
             bossPtr->collision(bossVec, bulletVec, scoreInt);
 
             score.drawScore(window, scoreInt);
+            health.drawHealth(window, healthInt);
 
 
         }
-                window.display();
+        window.display();
     }
     return 0;
 }
@@ -238,4 +247,12 @@ void drawBoss(std::vector<Boss>& bossVec, sf::RenderWindow& window)
     for (int i = 0; i < bossVec.size(); i++){
         bossVec[i].drawBoss(window);
     }
+}
+
+void resetMatch(std::vector<Enemy>& enemyVec, std::vector<Boss>& bossVec, int& scoreInt, int& healthInt)
+{
+    enemyVec.clear();
+    bossVec.clear();
+    scoreInt = 0;
+    healthInt = 3;
 }

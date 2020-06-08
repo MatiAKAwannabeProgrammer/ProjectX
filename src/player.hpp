@@ -1,6 +1,7 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
+#include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
@@ -25,6 +26,7 @@ public:
     void playerShooting(bool& isFired, sf::Time& bulletTime, sf::Clock& bulletClock, sf::Vector2f& velocity, sf::Vector2f& aimDirNorm);
     void drawPlayer(sf::RenderWindow& window);
     void playerRotate(sf::Vector2f& mousePos, sf::Vector2f& currentPos);
+    void getPlayerBounds(sf::FloatRect& playerBounds);
 
 };
 #endif

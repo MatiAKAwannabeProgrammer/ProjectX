@@ -44,6 +44,6 @@ void TextClass::drawHealth(sf::RenderWindow& window, int& healthInt)
 
 void TextClass::drawMenu(sf::RenderWindow& window)
 {
-    menu.setString("PROJECT X\n[Q] Quit\n[R] Restart");
+    menu.setString("PROJECT X\n[Q] Quit\n[P] Play");
     window.draw(menu);
 }

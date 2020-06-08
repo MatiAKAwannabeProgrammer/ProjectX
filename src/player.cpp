@@ -1,5 +1,6 @@
 #include "player.hpp"
 
+#include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Window/Keyboard.hpp>
@@ -57,4 +58,9 @@ void Player::playerRotate(sf::Vector2f& mousePos, sf::Vector2f& currentPos)
     b = mousePos.y - currentPos.y;
     angle = -atan2(a, b) * 180 / 3.14159;
     player.setRotation(angle);
+}
+
+void Player::getPlayerBounds(sf::FloatRect& playerBounds)
+{
+    playerBounds = player.getGlobalBounds();
 }

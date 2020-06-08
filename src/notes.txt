@@ -45,3 +45,11 @@ if (!roundInProgress)
     So the game grashes on the health-- line.
     I have no idea why, it's just a variable.
     It doesn't do anything on it's own.
+#So what was happening there is i was working on a variable associated to all tthe objects - health
+#instead of accessing it by saying enemyVec[i].health.
+
+Attacking the enemy:
+void enemyAttack
+if (enemyVec[i].attackBounds.constains(playerPos)){
+    attack
+}

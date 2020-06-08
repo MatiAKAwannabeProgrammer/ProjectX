@@ -8,12 +8,10 @@
 [X] Limit the amount of spawned enemies.
 [X] Create a delay between the rounds.
 [X] Add a health pool to the enemies.
-#--------------------------------------------------------------------
 #Because I have a enemyCount += 7, I don't really need a wave system. 
 #My current version with the delay works pretty much the same way.
 [C] Determine the amount of enemies based off a wave number.
 [C] In order to do above, implement wave system.
-#---------------------------------------------------------------------
 [X] Add a boss.
 [X] Add a score and health mechanic and display the two at the top of the screen.
 [X] Add a pause menu. 

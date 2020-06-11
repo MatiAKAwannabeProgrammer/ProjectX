@@ -12,14 +12,14 @@ TextClass::TextClass()
     score.setFillColor(sf::Color::Black);
     score.setOutlineColor(sf::Color::White);
     score.setOutlineThickness(1.f);
-    score.setCharacterSize(15.f);
+    score.setCharacterSize(20.f);
 
-    health.setPosition(sf::Vector2f(5.f, 20.f));
+    health.setPosition(sf::Vector2f(5.f, 25.f));
     health.setFont(font);
     health.setFillColor(sf::Color::Black);
     health.setOutlineColor(sf::Color::White);
     health.setOutlineThickness(1.f);
-    health.setCharacterSize(15.f);
+    health.setCharacterSize(20.f);
 
     menu.setPosition(sf::Vector2f(750.f, 400.f));
     menu.setFont(font);

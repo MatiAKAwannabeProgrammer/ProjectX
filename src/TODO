@@ -1,3 +1,7 @@
+P - in progress
+X - done
+C - cancelled
+
 [X] Change the player setOrigin function to be in the constructor, I'm pretty sure I do not need to update it in every frame.
 [X] Decrease the enemy movement speed.
 [X] Decrease the enemy spawn frequency.
@@ -18,5 +22,11 @@
 [X] Make the enemy hit the player.
 [X] Clear the enemies from the screen once the player is killed.
 [X] Restart the health and score for new game.
-[ ] Remove the boss class, it's pretty much identical and causes too much trouble.
-[ ] Make the enemy class handle all enemy types.
+[X] Remove the boss class, it's pretty much identical and causes too much trouble.
+[X] Make the enemy class handle all enemy types.
+[X] Fix the bug of not killing enemies once a boss is killed.
+[X] Create a health pickup.
+[P] Create a temporary bonus for the player, like multiple bullets.
+    - I need to add the effect of the bonus, I have everything else ready.
+[X] Perhaps I should try to find out why my game crashes when killing the boss.
+[X] Increase the font size on score and health stats.

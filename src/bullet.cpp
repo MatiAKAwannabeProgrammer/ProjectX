@@ -3,10 +3,14 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Vector2.hpp>
 
-Bullet::Bullet(sf::Vector2f& playerPos, sf::Vector2f& velocity)
+Bullet::Bullet(sf::Vector2f& playerPos, sf::Vector2f& velocity, bool& hasBonus)
 {
     bullet.setPosition(playerPos);
-    bulletTexture.loadFromFile("./content/bullet.png");
+    if (hasBonus){
+        bulletTexture.loadFromFile("./content/bullet2.png");
+    }else{
+        bulletTexture.loadFromFile("./content/bullet.png");
+    }
     bullet.setTexture(bulletTexture);
     this->velocity = velocity;
 }

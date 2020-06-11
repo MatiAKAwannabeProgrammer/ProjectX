@@ -21,17 +21,18 @@ private:
     sf::Vector2f moveDir, moveDirNorm, velocity;
     sf::FloatRect enemyBounds;
     int health;
+    bool isBoss;
 
     int randX, randY;
 
 public:
-    Enemy();
+    Enemy(bool isBoss);
     void enemyMovement(float& deltaTime);
     void drawEnemy(sf::RenderWindow& window);
     void getEnemyPos();
     void calculations(sf::Vector2f& playerPos);
-    void collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletVec, int& score);
-    void enemyAttack(std::vector<Enemy>& enemyVec, sf::Vector2f& playerPos, int& healthInt);
+    void collision(std::vector<Enemy>& enemyVec, std::vector<Bullet>& bulletVec, std::vector<Enemy>& bossVec, int& scoreInt);
+    void enemyAttack(std::vector<Enemy>& enemyVec,std::vector<Enemy>& bossVec, sf::Vector2f& playerPos, int& healthInt);
     sf::Vector2f enemyPos;
     
 };

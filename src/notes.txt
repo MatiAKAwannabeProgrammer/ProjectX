@@ -58,3 +58,11 @@ void attack()
 {
     playerHealth--;
 }
+
+So once a boss is killed, i can no longer kill regular enemies.
+
+!! I had a bug where enemies grouped up together with a boss would crash the game
+if i killed the boss sending a "segmentation fault" error. From what I understand it's 
+because I was attempting to access memory I didn't own. So i added: if (enemyVec.size() > 0 || bossVec.size() > 0)
+
+I should try reworking the healthpickup class so that it supports ammo and health.

@@ -13,7 +13,7 @@ private:
     sf::Vector2f velocity;
 
 public:
-    Bullet(sf::Vector2f& playerPos, sf::Vector2f& velocity);
+    Bullet(sf::Vector2f& playerPos, sf::Vector2f& velocity, bool& hasBonus);
     void drawBullet(sf::RenderWindow& window);
     void moveBullet(float& deltaTime);
     void getBulletPos();
